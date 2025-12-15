@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #35B729;
+  --text-dark: #111827; /* Deeper black for high contrast */
+  --text-gray: #6b7280;
+  --bg-section: #F3F4F6; /* Light gray background to make white cards POP */
+  --bg-white: #FFFFFF;
+  --border-light: #E5E7EB;
+  --font-main: 'Outfit', sans-serif;
+  --radius-card: 32px; /* Large modern radius */
+}
+
+.upcoming-seminars {
+  background-color: var(--bg-section);
+  padding: 6rem 0;
+  font-family: var(--font-main);
+}
+
+.container {
+  max-width: 1280px; /* Wide container for the bento feel */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* HEADER */
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.section-subtitle {
+  color: var(--text-gray);
+  font-size: 1.125rem;
+}
+
+/* --- THE BENTO GRID ENGINE --- */
+.bento-grid {
+  display: grid;
+  /* The "40% | 60%" split seen in your reference image */
+  grid-template-columns: 4fr 6fr; 
+  gap: 1.5rem; /* Precise 24px gap */
+  height: 600px; /* Fixed height ensures alignment */
+}
+
+/* Card Base Styles */
+.bento-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-card);
+  padding: 2.5rem; /* Deep padding */
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Subtle inner stroke */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+}
+
+.bento-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+}
+
+/* LEFT COLUMN (Large Vertical Card) */
+.bento-large {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.large-card-visual {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+/* Mocking the "Charts" from your image */
+.visual-circle-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.visual-item {
+  width: 80px;
+  height: 80px;
+  background: #F9FAFB;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #F3F4F6;
+  position: relative;
+}
+
+.visual-item.highlight {
+  background: #ffffff;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* Text Area for Large Card */
+.large-card-content {
+  text-align: center;
+}
+
+.large-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.large-desc {
+  color: var(--text-gray);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* RIGHT COLUMN (The Stack) */
+.bento-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.bento-small {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Vertically center content */
+  padding: 3rem; /* Extra padding for horizontal layout */
+}
+
+/* Content on Left */
+.small-content {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.small-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.small-desc {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Visual on Right */
+.small-visual {
+  flex: 0 0 160px; /* Fixed width for visual area */
+  height: 120px;
+  background: #F9FAFB;
+  border-radius: 20px;
+  border: 1px solid #F3F4F6;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating Elements (Decorations) */
+.float-icon {
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.float-top-right { top: -10px; right: -10px; }
+.float-bottom-left { bottom: -10px; left: -10px; }
+
+/* SHARED BUTTON (Pill Shape Black/Green) */
+.pill-btn {
+  background: var(--text-dark); /* Black button like reference */
+  color: white;
+  padding: 0.75rem 1.75rem;
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+  display: inline-flex;
+  width: fit-content;
+  transition: all 0.2s ease;
+}
+
+.pill-btn:hover {
+  background: var(--primary); /* Green on hover */
+  transform: translateY(-2px);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: 1fr; /* Stack everything */
+    height: auto;
+  }
+  
+  .bento-large {
+    min-height: 500px;
+  }
+  
+  .bento-small {
+    min-height: 300px;
+    flex-direction: column-reverse; /* Put image on top on mobile */
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .small-content { max-width: 100%; }
+  .small-visual { width: 100%; height: 160px; }
+}

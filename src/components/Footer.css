@@ -1,0 +1,210 @@
+.footer {
+  background: #2a2a2a;
+  color: white;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr;
+  gap: 3rem;
+  padding: 4rem 0 2rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section {
+  max-width: 300px;
+}
+
+.footer-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #999999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: #999999;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.read-more-btn {
+  background: transparent;
+  border: none;
+  color: #35B729;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: left;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.read-more-btn:hover {
+  color: #99E164;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: #999999;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links a::before {
+  content: '●';
+  color: #35B729;
+  font-size: 0.6rem;
+}
+
+.footer-links a:hover {
+  color: #35B729;
+}
+
+.support-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.support-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.support-label {
+  color: #35B729;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.support-value {
+  color: #999999;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.payment-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.secure-text {
+  color: #999999;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.stripe-logo {
+  color: #635bff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.payment-cards {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.card-icon {
+  background: #35B729;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.card-icon.mastercard {
+  background: #eb001b;
+}
+
+.card-icon.visa {
+  background: #1a1f71;
+}
+
+.card-icon.maestro {
+  background: #0099df;
+}
+
+.card-icon.amex {
+  background: #006fcf;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444444;
+  padding: 1.5rem 0;
+}
+
+.footer-bottom-content {
+  text-align: center;
+  color: #999999;
+  font-size: 0.9rem;
+}
+
+.company-name {
+  color: #35B729;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 0 2rem;
+  }
+  
+  .about-section {
+    max-width: 100%;
+  }
+  
+  .payment-cards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    padding: 2rem 0 1rem;
+  }
+  
+  .footer-title {
+    font-size: 0.9rem;
+  }
+  
+  .footer-description {
+    font-size: 0.85rem;
+  }
+}
