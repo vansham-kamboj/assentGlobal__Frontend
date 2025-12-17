@@ -31,7 +31,7 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
   font-family: var(--font-main);
 }
 
